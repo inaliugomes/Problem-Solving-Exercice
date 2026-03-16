@@ -1,0 +1,12 @@
+from datetime import date
+ano = int(input("Informe o seu año , adicionce zero para analisar o ano atual"))
+ano_atual = date.today().year
+
+if ano == 0:
+    ano = ano_atual
+
+
+if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+    print(f"{ano}  é um ano bissexto")
+else:
+    print(f"{ano} nao e um ano bissexto")
