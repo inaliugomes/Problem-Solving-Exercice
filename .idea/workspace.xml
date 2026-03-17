@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff0f7070-ad0f-48f7-ad1d-37ab725af45a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ExerciciosGuanabara/032.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExerciciosGuanabara/033.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExerciciosGuanabara/035.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExerciciosGuanabara/036.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExerciciosGuanabara/037.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExerciciosGuanabara/038.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExerciciosGuanabara/039.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "inaliugomes"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/inaliugomes/Problem-Solving-Exercice.git",
+    "accountId": "fe70c534-812e-4aac-a795-d33e54911362"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -70,6 +85,12 @@
     "Python.031.executor": "Run",
     "Python.032.executor": "Run",
     "Python.033.executor": "Run",
+    "Python.034.executor": "Run",
+    "Python.035.executor": "Run",
+    "Python.036.executor": "Run",
+    "Python.037.executor": "Run",
+    "Python.038.executor": "Run",
+    "Python.039.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -86,8 +107,8 @@
       <recent name="C:\Users\inali\PycharmProjects\CPProblemSolving" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.034">
-    <configuration name="030" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.039">
+    <configuration name="035" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CPProblemSolving" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,7 +122,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/030.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/035.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,7 +131,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="031" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="036" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CPProblemSolving" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,7 +145,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/031.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/036.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,7 +154,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="032" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="037" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CPProblemSolving" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,7 +168,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/032.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/037.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,7 +177,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="033" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="038" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CPProblemSolving" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,7 +191,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/033.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/038.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,7 +200,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="034" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="039" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CPProblemSolving" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -193,7 +214,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/034.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/039.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -204,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.034" />
-        <item itemvalue="Python.033" />
-        <item itemvalue="Python.032" />
-        <item itemvalue="Python.031" />
-        <item itemvalue="Python.030" />
+        <item itemvalue="Python.039" />
+        <item itemvalue="Python.038" />
+        <item itemvalue="Python.037" />
+        <item itemvalue="Python.036" />
+        <item itemvalue="Python.035" />
       </list>
     </recent_temporary>
   </component>
