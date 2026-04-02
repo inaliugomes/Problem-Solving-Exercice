@@ -14,3 +14,5 @@ print(f"Voce digitou {len(valores)} elementos")
 print(f"Os valores em ordem decrescente sao {valores}")
 if 5 in valores:
     print("O valor 5 faz parte da lista")
+else:
+    prin(f"O valor 5 nao foi encontrado na lista")
