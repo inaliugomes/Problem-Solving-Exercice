@@ -1,28 +1,26 @@
 lista_persona = [ ]
 finalizar = False
-maior_peso = 0
-menor_peso = 0
+maior_peso = 0.0
+menor_peso = 0.0
 nome_maior_peso = []
 nome_menor_peso = []
 while not finalizar:
     nome = str(input("Nome: "))
     peso = float(input("Peso: "))
     dados = [nome, peso]
+    if len(lista_persona) == 0:
+        maior_peso = peso
+        menor_peso = peso
+    else:
+        if peso > maior_peso:
+            maior_peso = peso
+        if peso < menor_peso:
+            menor_peso = peso
+
     lista_persona.append(dados)
     continuar = str(input("Continuar? [S/N]")).upper()
     if continuar == "N":
         finalizar = True
-
-for c in range(0, len(lista_persona)):
-    print(lista_persona[c])
-    if c == 0:
-        maior_peso = lista_persona[c][1]
-        menor_peso = lista_persona[c][1]
-    else:
-        if lista_persona[c][1] > maior_peso:
-            maior_peso = lista_persona[c][1]
-        if lista_persona[c][1] < menor_peso:
-            menor_peso = lista_persona[c][1]
 
 for pessoa in lista_persona:
     if pessoa[1] == maior_peso:
