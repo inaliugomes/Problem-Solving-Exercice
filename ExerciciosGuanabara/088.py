@@ -6,7 +6,7 @@ print("-="*20)
 
 sorteio = int(input("Quantos jogos deseja sortear? "))
 
-
+print(f"{"-="*20} SORTEANDO {sorteio} JOGOS {"-="*20}")
 for c in range(0, sorteio):
     numeros_sorteados = []
     for x in range(0, 6):
@@ -24,4 +24,4 @@ for c in range(0, sorteio):
     print(numeros_sorteados)
     sleep(1)
 
-
+print(f"{"-="*20} < BOA SORTE! > {"-="*20}")
