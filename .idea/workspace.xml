@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff0f7070-ad0f-48f7-ad1d-37ab725af45a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ExerciciosGuanabara/090.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExerciciosGuanabara/088.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciciosGuanabara/088.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,149 +47,104 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.001.executor": "Run",
-    "Python.002.executor": "Run",
-    "Python.003.executor": "Run",
-    "Python.004.executor": "Run",
-    "Python.005.executor": "Run",
-    "Python.006.executor": "Run",
-    "Python.007.executor": "Run",
-    "Python.008.executor": "Run",
-    "Python.009.executor": "Run",
-    "Python.010.executor": "Run",
-    "Python.011.executor": "Run",
-    "Python.012.executor": "Run",
-    "Python.013.executor": "Run",
-    "Python.014.executor": "Run",
-    "Python.015.executor": "Run",
-    "Python.016.executor": "Debug",
-    "Python.017.executor": "Run",
-    "Python.018.executor": "Run",
-    "Python.019.executor": "Run",
-    "Python.022.executor": "Run",
-    "Python.023.executor": "Run",
-    "Python.024.executor": "Run",
-    "Python.025.executor": "Run",
-    "Python.026.executor": "Run",
-    "Python.027.executor": "Run",
-    "Python.028.executor": "Run",
-    "Python.029.executor": "Run",
-    "Python.030.executor": "Run",
-    "Python.031.executor": "Run",
-    "Python.032.executor": "Run",
-    "Python.033.executor": "Run",
-    "Python.034.executor": "Run",
-    "Python.035.executor": "Run",
-    "Python.036.executor": "Run",
-    "Python.037.executor": "Run",
-    "Python.038.executor": "Run",
-    "Python.039.executor": "Run",
-    "Python.040.executor": "Run",
-    "Python.041.executor": "Run",
-    "Python.049.executor": "Run",
-    "Python.050.executor": "Run",
-    "Python.051.executor": "Run",
-    "Python.052.executor": "Run",
-    "Python.053.executor": "Run",
-    "Python.054.executor": "Run",
-    "Python.055.executor": "Run",
-    "Python.056.executor": "Run",
-    "Python.057.executor": "Run",
-    "Python.058.executor": "Run",
-    "Python.059.executor": "Run",
-    "Python.060.executor": "Run",
-    "Python.061.executor": "Run",
-    "Python.063.executor": "Run",
-    "Python.065.executor": "Run",
-    "Python.066.executor": "Run",
-    "Python.068.executor": "Run",
-    "Python.069.executor": "Run",
-    "Python.070.executor": "Run",
-    "Python.071.executor": "Run",
-    "Python.072.executor": "Run",
-    "Python.073.executor": "Run",
-    "Python.074.executor": "Run",
-    "Python.075.executor": "Run",
-    "Python.076.executor": "Run",
-    "Python.077.executor": "Run",
-    "Python.078.executor": "Run",
-    "Python.079.executor": "Run",
-    "Python.080.executor": "Run",
-    "Python.081.executor": "Run",
-    "Python.082.executor": "Run",
-    "Python.083.executor": "Run",
-    "Python.084.executor": "Run",
-    "Python.085.executor": "Run",
-    "Python.086.executor": "Run",
-    "Python.087.executor": "Run",
-    "Python.088.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/inali/PycharmProjects/CPProblemSolving",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.001.executor&quot;: &quot;Run&quot;,
+    &quot;Python.002.executor&quot;: &quot;Run&quot;,
+    &quot;Python.003.executor&quot;: &quot;Run&quot;,
+    &quot;Python.004.executor&quot;: &quot;Run&quot;,
+    &quot;Python.005.executor&quot;: &quot;Run&quot;,
+    &quot;Python.006.executor&quot;: &quot;Run&quot;,
+    &quot;Python.007.executor&quot;: &quot;Run&quot;,
+    &quot;Python.008.executor&quot;: &quot;Run&quot;,
+    &quot;Python.009.executor&quot;: &quot;Run&quot;,
+    &quot;Python.010.executor&quot;: &quot;Run&quot;,
+    &quot;Python.011.executor&quot;: &quot;Run&quot;,
+    &quot;Python.012.executor&quot;: &quot;Run&quot;,
+    &quot;Python.013.executor&quot;: &quot;Run&quot;,
+    &quot;Python.014.executor&quot;: &quot;Run&quot;,
+    &quot;Python.015.executor&quot;: &quot;Run&quot;,
+    &quot;Python.016.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.017.executor&quot;: &quot;Run&quot;,
+    &quot;Python.018.executor&quot;: &quot;Run&quot;,
+    &quot;Python.019.executor&quot;: &quot;Run&quot;,
+    &quot;Python.022.executor&quot;: &quot;Run&quot;,
+    &quot;Python.023.executor&quot;: &quot;Run&quot;,
+    &quot;Python.024.executor&quot;: &quot;Run&quot;,
+    &quot;Python.025.executor&quot;: &quot;Run&quot;,
+    &quot;Python.026.executor&quot;: &quot;Run&quot;,
+    &quot;Python.027.executor&quot;: &quot;Run&quot;,
+    &quot;Python.028.executor&quot;: &quot;Run&quot;,
+    &quot;Python.029.executor&quot;: &quot;Run&quot;,
+    &quot;Python.030.executor&quot;: &quot;Run&quot;,
+    &quot;Python.031.executor&quot;: &quot;Run&quot;,
+    &quot;Python.032.executor&quot;: &quot;Run&quot;,
+    &quot;Python.033.executor&quot;: &quot;Run&quot;,
+    &quot;Python.034.executor&quot;: &quot;Run&quot;,
+    &quot;Python.035.executor&quot;: &quot;Run&quot;,
+    &quot;Python.036.executor&quot;: &quot;Run&quot;,
+    &quot;Python.037.executor&quot;: &quot;Run&quot;,
+    &quot;Python.038.executor&quot;: &quot;Run&quot;,
+    &quot;Python.039.executor&quot;: &quot;Run&quot;,
+    &quot;Python.040.executor&quot;: &quot;Run&quot;,
+    &quot;Python.041.executor&quot;: &quot;Run&quot;,
+    &quot;Python.049.executor&quot;: &quot;Run&quot;,
+    &quot;Python.050.executor&quot;: &quot;Run&quot;,
+    &quot;Python.051.executor&quot;: &quot;Run&quot;,
+    &quot;Python.052.executor&quot;: &quot;Run&quot;,
+    &quot;Python.053.executor&quot;: &quot;Run&quot;,
+    &quot;Python.054.executor&quot;: &quot;Run&quot;,
+    &quot;Python.055.executor&quot;: &quot;Run&quot;,
+    &quot;Python.056.executor&quot;: &quot;Run&quot;,
+    &quot;Python.057.executor&quot;: &quot;Run&quot;,
+    &quot;Python.058.executor&quot;: &quot;Run&quot;,
+    &quot;Python.059.executor&quot;: &quot;Run&quot;,
+    &quot;Python.060.executor&quot;: &quot;Run&quot;,
+    &quot;Python.061.executor&quot;: &quot;Run&quot;,
+    &quot;Python.063.executor&quot;: &quot;Run&quot;,
+    &quot;Python.065.executor&quot;: &quot;Run&quot;,
+    &quot;Python.066.executor&quot;: &quot;Run&quot;,
+    &quot;Python.068.executor&quot;: &quot;Run&quot;,
+    &quot;Python.069.executor&quot;: &quot;Run&quot;,
+    &quot;Python.070.executor&quot;: &quot;Run&quot;,
+    &quot;Python.071.executor&quot;: &quot;Run&quot;,
+    &quot;Python.072.executor&quot;: &quot;Run&quot;,
+    &quot;Python.073.executor&quot;: &quot;Run&quot;,
+    &quot;Python.074.executor&quot;: &quot;Run&quot;,
+    &quot;Python.075.executor&quot;: &quot;Run&quot;,
+    &quot;Python.076.executor&quot;: &quot;Run&quot;,
+    &quot;Python.077.executor&quot;: &quot;Run&quot;,
+    &quot;Python.078.executor&quot;: &quot;Run&quot;,
+    &quot;Python.079.executor&quot;: &quot;Run&quot;,
+    &quot;Python.080.executor&quot;: &quot;Run&quot;,
+    &quot;Python.081.executor&quot;: &quot;Run&quot;,
+    &quot;Python.082.executor&quot;: &quot;Run&quot;,
+    &quot;Python.083.executor&quot;: &quot;Run&quot;,
+    &quot;Python.084.executor&quot;: &quot;Run&quot;,
+    &quot;Python.085.executor&quot;: &quot;Run&quot;,
+    &quot;Python.086.executor&quot;: &quot;Run&quot;,
+    &quot;Python.087.executor&quot;: &quot;Run&quot;,
+    &quot;Python.088.executor&quot;: &quot;Run&quot;,
+    &quot;Python.089.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/inali/PycharmProjects/CPProblemSolving&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\inali\PycharmProjects\CPProblemSolving\ExerciciosGuanabara" />
       <recent name="C:\Users\inali\PycharmProjects\CPProblemSolving" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.088">
-    <configuration name="084" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CPProblemSolving" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExerciciosGuanabara" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/084.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="085" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CPProblemSolving" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExerciciosGuanabara" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/085.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.090">
     <configuration name="086" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CPProblemSolving" />
       <option name="ENV_FILES" value="" />
@@ -259,13 +214,59 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="089" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CPProblemSolving" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExerciciosGuanabara" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/089.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="090" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CPProblemSolving" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExerciciosGuanabara" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/090.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.090" />
+        <item itemvalue="Python.089" />
         <item itemvalue="Python.088" />
         <item itemvalue="Python.087" />
         <item itemvalue="Python.086" />
-        <item itemvalue="Python.085" />
-        <item itemvalue="Python.084" />
       </list>
     </recent_temporary>
   </component>
