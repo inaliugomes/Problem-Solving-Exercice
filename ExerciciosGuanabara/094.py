@@ -24,3 +24,8 @@ while continuar:
             break
         else:
             print("A sua resposta deve ser S ou N")
+
+media = media_idade / len(lista_pessoas)
+print("-="*20)
+print(f"A) Ao todo temos {len(lista_pessoas)} pessoas cadastradas.")
+print(f"B) A média de idade é de {media}")
