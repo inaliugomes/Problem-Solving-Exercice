@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff0f7070-ad0f-48f7-ad1d-37ab725af45a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ExerciciosGuanabara/101.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSA/BIG O/tabla" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeedCode/001Two-Sum.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeedCode/21. Merge Two Sorted Lists.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeedCode/Two Sum.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +54,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.001.executor": "Run",
+    "Python.001Two-Sum.executor": "Run",
     "Python.002.executor": "Run",
     "Python.003.executor": "Run",
     "Python.004.executor": "Run",
@@ -157,8 +161,8 @@
       <recent name="C:\Users\inali\PycharmProjects\CPProblemSolving" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.101">
-    <configuration name="097" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.001Two-Sum">
+    <configuration name="001Two-Sum" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CPProblemSolving" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,12 +171,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExerciciosGuanabara" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeedCode" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExerciciosGuanabara/097.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeedCode/001Two-Sum.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -275,11 +279,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.001Two-Sum" />
         <item itemvalue="Python.101" />
         <item itemvalue="Python.100" />
         <item itemvalue="Python.099" />
         <item itemvalue="Python.098" />
-        <item itemvalue="Python.097" />
       </list>
     </recent_temporary>
   </component>
