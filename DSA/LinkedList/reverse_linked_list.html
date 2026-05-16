@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Linked List — Visualização</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f1117;
+            color: #e2e8f0;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            color: #7dd3fc;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* STEP CARD */
+        .step-card {
+            background: #1e2130;
+            border: 1px solid #2d3748;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            transition: border-color 0.3s;
+        }
+
+        .step-card.active {
+            border-color: #7dd3fc;
+            box-shadow: 0 0 20px rgba(125, 211, 252, 0.1);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .step-badge {
+            background: #0ea5e9;
+            color: white;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .step-badge.start { background: #8b5cf6; }
+        .step-badge.end   { background: #10b981; }
+
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .step-desc {
+            color: #94a3b8;
+            font-size: 0.88rem;
+            margin-top: 2px;
+        }
+
+        /* VARIABLES BOX */
+        .vars {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .var-box {
+            background: #111827;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
+        .var-box span { color: #f472b6; }
+        .var-box strong { color: #fbbf24; }
+
+        /* LINKED LIST DIAGRAM */
+        .diagram {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            padding: 16px 0;
+            overflow-x: auto;
+        }
+
+        .node-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .node-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            height: 18px;
+            display: flex;
+            gap: 6px;
+        }
+
+        .label-prev { color: #f472b6; }
+        .label-curr { color: #fbbf24; }
+        .label-next { color: #34d399; }
+
+        .node {
+            display: flex;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #374151;
+            background: #111827;
+            min-width: 80px;
+        }
+
+        .node.highlight-prev { border-color: #f472b6; box-shadow: 0 0 12px rgba(244,114,182,0.3); }
+        .node.highlight-curr { border-color: #fbbf24; box-shadow: 0 0 12px rgba(251,191,36,0.3); }
+        .node.highlight-next { border-color: #34d399; box-shadow: 0 0 12px rgba(52,211,153,0.3); }
+
+        .node-val {
+            padding: 12px 14px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e2e8f0;
+            border-right: 2px solid #374151;
+            min-width: 44px;
+            text-align: center;
+        }
+
+        .node-ptr {
+            padding: 12px 10px;
+            font-size: 0.7rem;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 36px;
+        }
+
+        /* ARROWS */
+        .arrow-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 50px;
+            flex-shrink: 0;
+        }
+
+        .arrow {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .arrow.right { color: #4ade80; }
+        .arrow.left  { color: #f87171; }
+        .arrow.none  { color: #374151; }
+        .arrow.new   { color: #f87171; font-weight: bold; }
+
+        .arrow-label {
+            font-size: 0.65rem;
+            color: #64748b;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        .null-box {
+            background: #111827;
+            border: 2px dashed #374151;
+            border-radius: 8px;
+            padding: 12px 14px;
+            color: #4b5563;
+            font-family: monospace;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* CODE HIGHLIGHT */
+        .code-block {
+            background: #0d1117;
+            border: 1px solid #2d3748;
+            border-radius: 10px;
+            padding: 16px;
+            font-family: monospace;
+            font-size: 0.88rem;
+            line-height: 1.8;
+            margin-top: 16px;
+        }
+
+        .code-line { color: #94a3b8; padding: 2px 8px; border-radius: 4px; }
+        .code-line.active { background: #1e3a5f; color: #7dd3fc; }
+        .kw  { color: #c678dd; }
+        .fn  { color: #61afef; }
+        .var { color: #e06c75; }
+        .num { color: #d19a66; }
+        .cm  { color: #5c6370; font-style: italic; }
+
+        /* EXPLANATION */
+        .explanation {
+            background: #0f2027;
+            border-left: 3px solid #0ea5e9;
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin-top: 16px;
+            font-size: 0.88rem;
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+
+        .explanation strong { color: #7dd3fc; }
+
+        /* RESULT */
+        .result-section {
+            background: #052e16;
+            border: 2px solid #10b981;
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .result-section h3 { color: #34d399; margin-bottom: 16px; font-size: 1.1rem; }
+
+        /* LEGEND */
+        .legend {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            background: #1e2130;
+            border-radius: 12px;
+            padding: 14px 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+        }
+
+        .dot {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Reverse Linked List</h1>
+    <p class="subtitle">LeetCode 206 — Visualização passo a passo da troca de ponteiros</p>
+
+    <div class="legend">
+        <div class="legend-item">
+            <div class="dot" style="background:#f472b6"></div>
+            <span><code>prev</code> — lista já invertida</span>
+        </div>
+        <div class="legend-item">
+            <div class="dot" style="background:#fbbf24"></div>
+            <span><code>curr</code> — nó actual</span>
+        </div>
+        <div class="legend-item">
+            <div class="dot" style="background:#34d399"></div>
+            <span><code>next_node</code> — próximo (guardado antes de cortar)</span>
+        </div>
+        <div class="legend-item">
+            <div class="dot" style="background:#f87171"></div>
+            <span>Ponteiro invertido (novo)</span>
+        </div>
+    </div>
+
+    <!-- ESTADO INICIAL -->
+    <div class="step-card active">
+        <div class="step-header">
+            <div class="step-badge start">0</div>
+            <div>
+                <div class="step-title">Estado inicial</div>
+                <div class="step-desc">Antes do loop começar</div>
+            </div>
+        </div>
+
+        <div class="vars">
+            <div class="var-box"><span>prev</span> = <strong>None</strong></div>
+            <div class="var-box"><span>curr</span> = <strong>1</strong></div>
+        </div>
+
+        <div class="diagram">
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-curr">curr</span></div>
+                <div class="node highlight-curr">
+                    <div class="node-val">1</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node">
+                    <div class="node-val">2</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node">
+                    <div class="node-val">3</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="null-box">None</div>
+            &nbsp;&nbsp;&nbsp;
+            <div class="null-box" style="border-color:#f472b6;color:#f472b6;">prev = None</div>
+        </div>
+
+        <div class="explanation">
+            <strong>prev</strong> começa como None — representa a lista invertida (ainda vazia).<br>
+            <strong>curr</strong> começa no head — é o nó que estamos a processar agora.
+        </div>
+    </div>
+
+    <!-- ITERAÇÃO 1 -->
+    <div class="step-card">
+        <div class="step-header">
+            <div class="step-badge">1</div>
+            <div>
+                <div class="step-title">Iteração 1 — processar nó 1</div>
+                <div class="step-desc">4 linhas executam em sequência</div>
+            </div>
+        </div>
+
+        <div class="vars">
+            <div class="var-box"><span>prev</span> = <strong>None</strong></div>
+            <div class="var-box"><span>curr</span> = <strong>1</strong></div>
+            <div class="var-box"><span>next_node</span> = <strong>2</strong></div>
+        </div>
+
+        <!-- Passo 1a: guardar next -->
+        <p style="color:#94a3b8; font-size:0.85rem; margin-bottom:8px; font-weight:600;">① next_node = curr.next &nbsp;→&nbsp; guarda o nó 2 antes de cortar</p>
+        <div class="diagram">
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-curr">curr</span></div>
+                <div class="node highlight-curr">
+                    <div class="node-val">1</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-next">next_node</span></div>
+                <div class="node highlight-next">
+                    <div class="node-val">2</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node">
+                    <div class="node-val">3</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="null-box">None</div>
+        </div>
+
+        <!-- Passo 1b: inverter ponteiro -->
+        <p style="color:#94a3b8; font-size:0.85rem; margin: 16px 0 8px; font-weight:600;">② curr.next = prev &nbsp;→&nbsp; nó 1 aponta para None (inverte o ponteiro!)</p>
+        <div class="diagram">
+            <div class="null-box" style="border-color:#f472b6;color:#f472b6;">None (prev)</div>
+            <div class="arrow-wrap">
+                <div class="arrow new">←</div>
+                <div class="arrow-label">INVERTIDO</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-curr">curr</span></div>
+                <div class="node highlight-curr">
+                    <div class="node-val">1</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div style="width:50px"></div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-next">next_node</span></div>
+                <div class="node highlight-next">
+                    <div class="node-val">2</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node">
+                    <div class="node-val">3</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="null-box">None</div>
+        </div>
+
+        <!-- Passo 1c: avançar -->
+        <p style="color:#94a3b8; font-size:0.85rem; margin: 16px 0 8px; font-weight:600;">③④ prev = curr &nbsp;·&nbsp; curr = next_node &nbsp;→&nbsp; ambas as variáveis avançam</p>
+        <div class="diagram">
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-prev">prev</span></div>
+                <div class="node highlight-prev">
+                    <div class="node-val">1</div>
+                    <div class="node-ptr">→None</div>
+                </div>
+            </div>
+            <div style="width:50px"></div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-curr">curr</span></div>
+                <div class="node highlight-curr">
+                    <div class="node-val">2</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node">
+                    <div class="node-val">3</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="null-box">None</div>
+        </div>
+
+        <div class="explanation">
+            O nó <strong>1</strong> foi desligado da lista original e agora aponta para <strong>None</strong>.<br>
+            Guardámos o nó <strong>2</strong> em <code>next_node</code> antes de cortar — sem isso perdiamos o resto da lista!
+        </div>
+    </div>
+
+    <!-- ITERAÇÃO 2 -->
+    <div class="step-card">
+        <div class="step-header">
+            <div class="step-badge">2</div>
+            <div>
+                <div class="step-title">Iteração 2 — processar nó 2</div>
+                <div class="step-desc">Mesmas 4 linhas, agora curr = 2</div>
+            </div>
+        </div>
+
+        <div class="vars">
+            <div class="var-box"><span>prev</span> = <strong>1</strong></div>
+            <div class="var-box"><span>curr</span> = <strong>2</strong></div>
+            <div class="var-box"><span>next_node</span> = <strong>3</strong></div>
+        </div>
+
+        <p style="color:#94a3b8; font-size:0.85rem; margin-bottom:8px; font-weight:600;">② curr.next = prev &nbsp;→&nbsp; nó 2 aponta para nó 1 (invertido!)</p>
+        <div class="diagram">
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-prev">prev</span></div>
+                <div class="node highlight-prev">
+                    <div class="node-val">1</div>
+                    <div class="node-ptr">→None</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow new">←</div>
+                <div class="arrow-label">INVERTIDO</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-curr">curr</span></div>
+                <div class="node highlight-curr">
+                    <div class="node-val">2</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div style="width:50px"></div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-next">next_node</span></div>
+                <div class="node highlight-next">
+                    <div class="node-val">3</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="null-box">None</div>
+        </div>
+
+        <p style="color:#94a3b8; font-size:0.85rem; margin: 16px 0 8px; font-weight:600;">③④ Avançar prev e curr</p>
+        <div class="diagram">
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node">
+                    <div class="node-val">1</div>
+                    <div class="node-ptr">→None</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow new">←</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-prev">prev</span></div>
+                <div class="node highlight-prev">
+                    <div class="node-val">2</div>
+                    <div class="node-ptr">→1</div>
+                </div>
+            </div>
+            <div style="width:50px"></div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-curr">curr</span></div>
+                <div class="node highlight-curr">
+                    <div class="node-val">3</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow right">→</div>
+            </div>
+            <div class="null-box">None</div>
+        </div>
+
+        <div class="explanation">
+            A lista invertida está a crescer: <strong>2 → 1 → None</strong>.<br>
+            <code>prev</code> aponta sempre para o início da lista já invertida.
+        </div>
+    </div>
+
+    <!-- ITERAÇÃO 3 -->
+    <div class="step-card">
+        <div class="step-header">
+            <div class="step-badge">3</div>
+            <div>
+                <div class="step-title">Iteração 3 — processar nó 3 (último)</div>
+                <div class="step-desc">curr = 3, next_node = None</div>
+            </div>
+        </div>
+
+        <div class="vars">
+            <div class="var-box"><span>prev</span> = <strong>2</strong></div>
+            <div class="var-box"><span>curr</span> = <strong>3</strong></div>
+            <div class="var-box"><span>next_node</span> = <strong>None</strong></div>
+        </div>
+
+        <p style="color:#94a3b8; font-size:0.85rem; margin-bottom:8px; font-weight:600;">② curr.next = prev &nbsp;→&nbsp; nó 3 aponta para nó 2</p>
+        <div class="diagram">
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node">
+                    <div class="node-val">1</div>
+                    <div class="node-ptr">→None</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow new">←</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-prev">prev</span></div>
+                <div class="node highlight-prev">
+                    <div class="node-val">2</div>
+                    <div class="node-ptr">→1</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow new">←</div>
+                <div class="arrow-label">INVERTIDO</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-curr">curr</span></div>
+                <div class="node highlight-curr">
+                    <div class="node-val">3</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="color:#94a3b8; font-size:0.85rem; margin: 16px 0 8px; font-weight:600;">③④ prev = 3 · curr = None &nbsp;→&nbsp; loop termina (curr is None)</p>
+        <div class="diagram">
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node">
+                    <div class="node-val">1</div>
+                    <div class="node-ptr">→None</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow new">←</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node">
+                    <div class="node-val">2</div>
+                    <div class="node-ptr">→1</div>
+                </div>
+            </div>
+            <div class="arrow-wrap">
+                <div class="arrow new">←</div>
+            </div>
+            <div class="node-wrap">
+                <div class="node-label"><span class="label-prev">prev = novo head</span></div>
+                <div class="node highlight-prev">
+                    <div class="node-val">3</div>
+                    <div class="node-ptr">→2</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <code>curr</code> é agora <strong>None</strong> — o loop pára.<br>
+            <code>prev</code> aponta para o nó <strong>3</strong>, que é o novo head da lista invertida.<br>
+            Por isso retornamos <code>prev</code> e não <code>curr</code>!
+        </div>
+    </div>
+
+    <!-- RESULTADO -->
+    <div class="result-section">
+        <h3>Resultado Final</h3>
+        <div class="diagram" style="justify-content:center;">
+            <div class="node-wrap">
+                <div class="node-label" style="justify-content:center;"><span style="color:#10b981;">new head</span></div>
+                <div class="node" style="border-color:#10b981;">
+                    <div class="node-val">3</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap"><div class="arrow new">→</div></div>
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node" style="border-color:#10b981;">
+                    <div class="node-val">2</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap"><div class="arrow new">→</div></div>
+            <div class="node-wrap">
+                <div class="node-label"></div>
+                <div class="node" style="border-color:#10b981;">
+                    <div class="node-val">1</div>
+                    <div class="node-ptr">next</div>
+                </div>
+            </div>
+            <div class="arrow-wrap"><div class="arrow right">→</div></div>
+            <div class="null-box" style="border-color:#10b981;color:#10b981;">None</div>
+        </div>
+        <p style="color:#6ee7b7; margin-top:16px;">
+            <code>return prev</code> &nbsp;·&nbsp; O(n) tempo &nbsp;·&nbsp; O(1) espaço — sem criar nós novos
+        </p>
+    </div>
+
+    <!-- CÓDIGO FINAL -->
+    <div class="step-card" style="margin-top:24px;">
+        <div class="step-header">
+            <div class="step-badge end">✓</div>
+            <div>
+                <div class="step-title">Código completo</div>
+                <div class="step-desc">4 linhas dentro do while</div>
+            </div>
+        </div>
+        <div class="code-block">
+            <div class="code-line"><span class="kw">def</span> <span class="fn">reverseList</span>(<span class="var">self</span>, <span class="var">head</span>):</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="var">prev</span> = <span class="num">None</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm"># lista invertida (começa vazia)</span></div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="var">curr</span> = <span class="var">head</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm"># nó actual</span></div>
+            <div class="code-line">&nbsp;</div>
+            <div class="code-line"><span class="kw">&nbsp;&nbsp;&nbsp;&nbsp;while</span> <span class="var">curr</span> <span class="kw">is not</span> <span class="num">None</span>:</div>
+            <div class="code-line active">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="var">next_node</span> = <span class="var">curr</span>.next &nbsp;&nbsp;<span class="cm"># ① guardar próximo</span></div>
+            <div class="code-line active">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="var">curr</span>.next = <span class="var">prev</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm"># ② inverter ponteiro</span></div>
+            <div class="code-line active">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="var">prev</span> = <span class="var">curr</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm"># ③ avançar prev</span></div>
+            <div class="code-line active">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="var">curr</span> = <span class="var">next_node</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="cm"># ④ avançar curr</span></div>
+            <div class="code-line">&nbsp;</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="var">prev</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm"># novo head</span></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
