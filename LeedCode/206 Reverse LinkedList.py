@@ -14,11 +14,12 @@ class Solution(object):
         curr = head
 
         while curr is not None:
+            #El el proximo Node es igual el atual
             next_node = curr.next
             curr.next = prev
             prev = curr
             curr = next_node
 
-        return prev
+            return prev
 
 
