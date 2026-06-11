@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ff0f7070-ad0f-48f7-ad1d-37ab725af45a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/LinkedList/Pratico/SingleLinkedLIst.py" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/LinkedList/Pratico/SingleLinkedLIst.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +320,7 @@
       <workItem from="1780818222063" duration="631000" />
       <workItem from="1781012162093" duration="5662000" />
       <workItem from="1781122281715" duration="612000" />
-      <workItem from="1781170625526" duration="5560000" />
+      <workItem from="1781170625526" duration="7523000" />
     </task>
     <servers />
   </component>
@@ -346,5 +345,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Problem_Solving_Exercice$002Add_Two_Numbers.coverage" NAME="002Add Two Numbers Coverage Results" MODIFIED="1780220073057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeedCode" />
+    <SUITE FILE_PATH="coverage/Problem_Solving_Exercice$SingleLinkedLIst.coverage" NAME="SingleLinkedLIst Coverage Results" MODIFIED="1781184207061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DSA/LinkedList/Pratico" />
   </component>
 </project>
